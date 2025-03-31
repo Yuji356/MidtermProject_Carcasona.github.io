@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="style.css">
+   
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Images/avatar.jpg" alt="Profile Avatar" class="avatar">
+            Oskar Jene Carcasona
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="openPage('Index.html')">Home</a></li>
+                <li><a href="#" onclick="openPage('Portfolio.html')">Portfolio</a></li>
+                <li><a href="#" onclick="openPage('Favorites.html')"class="active">Favorites</a></li>
+                <li><a href="#" onclick="self.close(); return false;">Close</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content"> 
+        <h2 id="gallery-header">Favorites</h2> 
+        <h3 id="gallery-caption">These are my favorite views that I captured, along with a single line from my poem.</h3>
+        <div id="art-exhibit"> 
+            
+            <div>
+                <div id="artwork-1" class="artwork">
+                    <p class="quote">Like the sun that light the sky, <br> Our dreams shine, they never die.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section"> 
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul> 
+                    <input type="text" class="comment-input" placeholder="Add a comment..."> 
+                    <button onclick="addComment(this)">Post</button> 
+                </div>
+            </div>
+            
+            <div>
+                <div id="artwork-2" class="artwork">
+                    
+                    <p class="quote">We are but dust upon the sea, <br> Yet boundless souls forever free.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+            
+            <div>
+                <div id="artwork-3" class="artwork">
+                    <p class="quote">A river flows, it does not stay, <br> Yet carves the earth along the way.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+
+            <div>
+                <div id="artwork-4" class="artwork">
+                    <p class="quote">Waves embrace the dying light,<br> Whispers of day fade into night.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+            
+            <div>
+                <div id="artwork-5" class="artwork">
+                    <p class="quote">In nature’s heart, we find our peace, <br> A gentle touch, a soul’s release.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+
+            <div>
+                <div id="artwork-6" class="artwork">
+                    <p class="quote">The sky holds a tale untold, <br> Of wishes made and dreams of old.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+            
+            <div>
+                <div id="artwork-7" class="artwork">
+                    <p class="quote">The universe whispers in the <br>breeze, A song of time, of love, and peace.</p>
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+            
+            <div>
+                <div id="artwork-8" class="artwork">
+                    <p class="quote">Oceans teach us that even the <br>wildest hearts find peace in their <br>own rhythm</p>
+                    
+                    <div class="heart1" onclick="toggleLike(this)"><img src="Images/heart.png" class="tosmall"></div>
+                </div>
+                
+                <div class="comments-section">
+                    <p>Comment Section</p>
+                    <ul class="comments-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+        function toggleLike(element) {
+            let heartImg = element.querySelector("img"); 
+
+            
+            if (heartImg.dataset.liked === "true") {
+                heartImg.style.filter = "grayscale(100%)"; 
+                heartImg.dataset.liked = "false"; 
+            } else {
+                heartImg.style.filter = "invert(21%) sepia(85%) saturate(7483%) hue-rotate(358deg) brightness(94%) contrast(120%)"; // Turn red
+                heartImg.dataset.liked = "true"; 
+            }
+}
+        
+        function addComment(button) {
+            let commentInput = button.previousElementSibling; 
+            let commentText = commentInput.value.trim(); 
+            if (commentText !== "") { 
+                let commentList = button.parentElement.querySelector(".comments-list"); 
+                let newComment = document.createElement("li"); 
+                newComment.textContent = commentText; 
+                commentList.appendChild(newComment);
+                commentInput.value = ""; 
+            }
+        }
+
+// ====== CLOSE ======
+// open new tab then close previous tab
+        function openPage(url) {
+                window.open(url, '_blank'); 
+                self.close(); 
+            }
+        
+    </script>
+
+</body>
+</html>

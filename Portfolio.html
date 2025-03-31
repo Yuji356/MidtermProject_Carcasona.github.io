@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Images/avatar.jpg" alt="Profile Avatar" class="avatar">
+            Oskar Jene Carcasona
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="openPage('Index.html')">Home</a></li>
+                <li><a href="#" onclick="openPage('Portfolio.html')"class="active">Portfolio</a></li>
+                <li><a href="#" onclick="openPage('Favorites.html')">Favorites</a></li>
+                <li><a href="#" onclick="self.close(); return false;">Close</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+        <div class="function-integration">
+            <h1>Function Integration</h1>
+
+            <img src="Images/brainmaster.jpg" style="border-radius: 20px;">
+            <label>Pick your choice: </label>
+                <button onclick="convertCelsiusToFahrenheit()">1. Temperature Converter</button>
+                <button onclick="getLongerWord()">2. The Longer Word</button>
+                <button onclick="showUserBirthStone()">3. Know My Birthstone</button>
+                <button onclick="BasicMathOps()">4. Basic Operators</button>
+                <button onclick="ComputeAcceleration()">5. Compute for Acceleration</button>
+            
+        </div>
+    
+        <script>
+            // open new tab then close previous tab
+            function openPage(url) {
+                window.open(url, '_blank'); 
+                self.close(); 
+            }
+        </script>
+    
+
+
+
+</body>
+</html>
